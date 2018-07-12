@@ -29,6 +29,7 @@ public class    PostListActivity extends AppCompatActivity {
         myRef = mFirebaseDatabse.getReference();
         FirebaseUser user = mAuth.getCurrentUser();
         setUserID(user.getUid());
+        System.out.println("######## USER ID: " + getUserID() + " ########");
 
 
     }
