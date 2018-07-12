@@ -28,8 +28,16 @@ public class    PostListActivity extends AppCompatActivity {
         mFirebaseDatabse = FirebaseDatabase.getInstance();
         myRef = mFirebaseDatabse.getReference();
         FirebaseUser user = mAuth.getCurrentUser();
-        userID = user.getUid();
+        setUserID(user.getUid());
 
 
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }
